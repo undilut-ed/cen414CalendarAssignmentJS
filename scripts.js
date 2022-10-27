@@ -112,11 +112,11 @@ document.querySelectorAll(".nav-btn").forEach(function (element) {
     initDate = new Date(currentMonth.textContent);
     if (initDate.getMonth() == 0) {
       initDate.setMonth(
-        initDate.getMonth() + (element.classList.contains("previous") ? 0 : 1)
+        initDate.getMonth() + (element.classList.contains("previous") ? -1 : 1)
       );
     } else if (initDate.getMonth() == 11) {
       initDate.setMonth(
-        initDate.getMonth() + (element.classList.contains("previous") ? -1 : 0)
+        initDate.getMonth() + (element.classList.contains("previous") ? -1 : 1)
       );
     } else {
       initDate.setMonth(
